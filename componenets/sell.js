@@ -228,7 +228,7 @@ export default class Sell extends React.Component {
               <textarea
                 className="input"
                 rows="5"
-                placeholder="اذكرلنة مميزاتة، او اذا يعجبك عيوبة "
+                placeholder="اذكرلنة مميزاته، او اذا يعجبك عيوبه "
               />
             </div>
 
