@@ -14,15 +14,17 @@ export default class Home extends React.Component {
           <Col>
             <div className="header">
               <h1 style={{ padding: 30 }}>الرئيسية</h1>
-              <h6>قائمة الأصدقاء المعروضين للبيع</h6>
+              <div style={{ fontSize: "1rem" }}>
+                قائمة الأصدقاء المعروضين للبيع
+              </div>
             </div>
           </Col>
         </Row>
 
         <div style={{ margin: 70 }}>
           <Row className="cards">
-            <Col style={{ maxWidth: "25%" }}>
-              <div className="card">
+            <Col style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/info">
                 <div className="name">محمد ضياء الدين</div>
                 <div>
                   <div>
@@ -34,14 +36,30 @@ export default class Home extends React.Component {
                   </div>
                   <div>
                     <div className="details">
-                      <p>د.ع 1000</p>
-                      <p>
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
                         حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Col>
           </Row>
         </div>
@@ -50,7 +68,14 @@ export default class Home extends React.Component {
           <Row style={{ display: "flex", alignContent: "space-around" }}>
             <Col>
               <div className="button">
-                <button>اعرض صديقك للبيع</button>
+                <button>
+                  <Link
+                    to="sell"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    اعرض صديقك للبيع
+                  </Link>
+                </button>
               </div>
             </Col>
           </Row>

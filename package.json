@@ -13,6 +13,7 @@
   "author": "Ali Hamandi",
   "license": "MIT",
   "dependencies": {
+    "aos": "^2.3.4",
     "babel-core": "^6.26.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
