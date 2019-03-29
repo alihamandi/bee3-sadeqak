@@ -195,7 +195,7 @@ export default class Sell extends React.Component {
               data-aos-duration="1000"
             >
               <label className="label" style={{ display: "block" }}>
-                شنو أسم صديقك؟
+                شنو اسم صديقك؟
               </label>
               <input
                 className="input"
@@ -209,7 +209,7 @@ export default class Sell extends React.Component {
               data-aos-duration="1000"
             >
               <label className="label" style={{ display: "block" }}>
-                ببيش تريد تبيعة؟
+                ببيش تريد تبيعه؟
               </label>
               <input
                 className="input"
@@ -223,7 +223,7 @@ export default class Sell extends React.Component {
               data-aos-duration="1000"
             >
               <label className="label" style={{ display: "block" }}>
-                ليش تريد تبيعة؟
+                ليش تريد تبيعه؟
               </label>
               <textarea
                 className="input"
