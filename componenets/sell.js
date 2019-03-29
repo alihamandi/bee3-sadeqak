@@ -25,81 +25,6 @@ export default class Sell extends React.Component {
 
         <Row className="shit-2">
           <Col
-            sm={7.5}
-            style={{
-              minWidth: "60%",
-              maxWidth: "60%",
-              paddingRight: 50,
-              marginTop: 10
-            }}
-          >
-            <div
-              className="input-container"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                أرفع صورة صديقك
-              </label>
-              <input className="input" type="file" />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                شنو أسم صديقك؟
-              </label>
-              <input
-                className="input"
-                type="text"
-                placeholder="مثال : مصطفى علوان"
-              />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                ببيش تريد تبيعة؟
-              </label>
-              <input
-                className="input"
-                type="text"
-                placeholder="مثال : ١٠٠٠ دينار "
-              />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                ليش تريد تبيعة؟
-              </label>
-              <textarea
-                className="input"
-                rows="5"
-                placeholder="اذكرلنة مميزاتة، او اذا يعجبك عيوبة "
-              />
-            </div>
-
-            <div
-              className="form-button"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <button>
-                <Link style={{ textDecoration: "none", color: "white" }}>
-                  بيعه هسة
-                </Link>
-              </button>
-            </div>
-          </Col>
-
-          <Col
             sm={4.5}
             style={{
               minWidth: "35%",
@@ -109,14 +34,14 @@ export default class Sell extends React.Component {
           >
             <div
               className="how-to"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               شلون تبيع صديقك؟
             </div>
             <div
               className="how-to-card"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <div style={{ padding: 10 }}>
@@ -149,7 +74,7 @@ export default class Sell extends React.Component {
             </div>
             <div
               className="how-to-card"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <div style={{ padding: 10 }}>
@@ -182,7 +107,7 @@ export default class Sell extends React.Component {
             </div>
             <div
               className="how-to-card"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <div style={{ padding: 10 }}>
@@ -214,7 +139,7 @@ export default class Sell extends React.Component {
             </div>
             <div
               className="how-to-card"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <div style={{ padding: 10 }}>
@@ -243,6 +168,80 @@ export default class Sell extends React.Component {
                   دخل صديقك بصندوك هو ونايم وبيعه للمشتري
                 </div>
               </div>
+            </div>
+          </Col>
+          <Col
+            sm={7.5}
+            style={{
+              minWidth: "60%",
+              maxWidth: "60%",
+              paddingRight: 50,
+              marginTop: 10
+            }}
+          >
+            <div
+              className="input-container"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <label className="label" style={{ display: "block" }}>
+                أرفع صورة صديقك
+              </label>
+              <input className="input" type="file" />
+            </div>
+            <div
+              className="input-container"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <label className="label" style={{ display: "block" }}>
+                شنو أسم صديقك؟
+              </label>
+              <input
+                className="input"
+                type="text"
+                placeholder="مثال : مصطفى علوان"
+              />
+            </div>
+            <div
+              className="input-container"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <label className="label" style={{ display: "block" }}>
+                ببيش تريد تبيعة؟
+              </label>
+              <input
+                className="input"
+                type="text"
+                placeholder="مثال : ١٠٠٠ دينار "
+              />
+            </div>
+            <div
+              className="input-container"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <label className="label" style={{ display: "block" }}>
+                ليش تريد تبيعة؟
+              </label>
+              <textarea
+                className="input"
+                rows="5"
+                placeholder="اذكرلنة مميزاتة، او اذا يعجبك عيوبة "
+              />
+            </div>
+
+            <div
+              className="form-button"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <button>
+                <Link style={{ textDecoration: "none", color: "white" }}>
+                  بيعه هسة
+                </Link>
+              </button>
             </div>
           </Col>
         </Row>

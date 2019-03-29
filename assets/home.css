@@ -20,6 +20,15 @@
 .shit-2 {
   margin: 50px 200px !important;
 }
+@media only screen and (max-width: 900px) {
+  .shit-2 {
+    margin: 50px 50px !important;
+  }
+  .how-to {
+    margin-right: 75px !important;
+  }
+}
+
 .header {
   background: linear-gradient(-37deg, #f7618b 0%, #2a7aff 100%);
   text-align: center;
