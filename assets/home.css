@@ -28,6 +28,10 @@
     margin-right: 75px !important;
   }
 }
+body {
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
 
 .header {
   background: linear-gradient(-37deg, #f7618b 0%, #2a7aff 100%);
