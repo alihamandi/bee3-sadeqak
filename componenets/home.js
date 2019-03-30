@@ -327,7 +327,7 @@ export default class Home extends React.Component {
                           fontFamily: "jannaR"
                         }}
                       >
-                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                        حمد ون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
                       </p>
                       <p
                         style={{
