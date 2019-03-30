@@ -37,7 +37,273 @@ export default class Home extends React.Component {
 
         <div style={{ margin: 70 }}>
           <Row className="cards">
-            <Col style={{ minWidth: "25%", maxWidth: "25%" }}>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
+              <Link className="card" to="/buy">
+                <div className="name">محمد ضياء الدين</div>
+                <div>
+                  <div>
+                    <img
+                      className="img"
+                      src="https://picsum.photos/300/300"
+                      alt="wrapkit"
+                    />
+                  </div>
+                  <div>
+                    <div className="details">
+                      <p style={{ fontFamily: "jannaB" }}>د.ع 1000</p>
+                      <p
+                        style={{
+                          width: "200px",
+                          height: "70px",
+                          whiteSpace: "wrap",
+                          overflow: "hidden",
+                          paddingTop: 15,
+                          fontFamily: "jannaR"
+                        }}
+                      >
+                        حمدون كلش يحب الأكل الحار واني ما احبة سو اريد ابيعة
+                      </p>
+                      <p
+                        style={{
+                          color: "#8d97ad"
+                        }}
+                      >
+                        .....
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col sm={3} style={{ minWidth: "25%", maxWidth: "25%" }}>
               <Link className="card" to="/buy">
                 <div className="name">محمد ضياء الدين</div>
                 <div>
