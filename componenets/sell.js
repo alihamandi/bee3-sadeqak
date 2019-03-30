@@ -228,7 +228,7 @@ export default class Sell extends React.Component {
               <textarea
                 className="input"
                 rows="5"
-                placeholder="اذكرلنة مميزاته، او اذا يعجبك عيوبه "
+                placeholder="اذكرلنا مميزاته، او اذا يعجبك عيوبه "
               />
             </div>
 
@@ -238,7 +238,10 @@ export default class Sell extends React.Component {
               data-aos-duration="1000"
             >
               <button>
-                <Link style={{ textDecoration: "none", color: "white" }}>
+                <Link
+                  to="/info"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   بيعه هسة
                 </Link>
               </button>

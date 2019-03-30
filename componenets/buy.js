@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 
-export default class Info extends React.Component {
+export default class Buy extends React.Component {
   constructor() {
     super();
   }
@@ -63,7 +63,7 @@ export default class Info extends React.Component {
                   to="sell"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  شارك على الفيسبوك{" "}
+                  اشتري هسة
                 </Link>
               </button>
             </div>

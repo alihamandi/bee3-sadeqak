@@ -20,11 +20,25 @@ export default class Home extends React.Component {
             </div>
           </Col>
         </Row>
+        <Row style={{ display: "flex", alignContent: "space-around" }}>
+          <Col>
+            <div className="button">
+              <button>
+                <Link
+                  to="sell"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  اعرض صديقك للبيع
+                </Link>
+              </button>
+            </div>
+          </Col>
+        </Row>
 
         <div style={{ margin: 70 }}>
           <Row className="cards">
             <Col style={{ minWidth: "25%", maxWidth: "25%" }}>
-              <Link className="card" to="/info">
+              <Link className="card" to="/buy">
                 <div className="name">محمد ضياء الدين</div>
                 <div>
                   <div>
@@ -64,22 +78,7 @@ export default class Home extends React.Component {
           </Row>
         </div>
 
-        <div style={{ margin: 100 }}>
-          <Row style={{ display: "flex", alignContent: "space-around" }}>
-            <Col>
-              <div className="button">
-                <button>
-                  <Link
-                    to="sell"
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    اعرض صديقك للبيع
-                  </Link>
-                </button>
-              </div>
-            </Col>
-          </Row>
-        </div>
+        <div style={{ margin: 100 }} />
       </Container>
     );
   }

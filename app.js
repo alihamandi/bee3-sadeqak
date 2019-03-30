@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Home from "./componenets/home";
 import Info from "./componenets/info";
 import Sell from "./componenets/sell";
+import Buy from "./componenets/buy";
 
 class App extends React.Component {
   constructor() {
@@ -29,6 +30,12 @@ class App extends React.Component {
           path="/sell"
           // component={localStorage.getItem("token") ? Logged : Main}
           component={Sell}
+        />
+        <Route
+          exact
+          path="/buy"
+          // component={localStorage.getItem("token") ? Logged : Main}
+          component={Buy}
         />
       </Router>
     );

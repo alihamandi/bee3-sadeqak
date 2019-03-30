@@ -25,7 +25,7 @@
     margin: 50px 50px !important;
   }
   .how-to {
-    margin-right: 75px !important;
+    margin-right: 50px !important;
   }
 }
 body {
@@ -166,7 +166,7 @@ body {
   text-align: center;
 }
 .infobutton button {
-  padding: 20px 40px;
+  padding: 20px 110px;
   font-size: 1rem;
   font-family: jannaB;
   border: none;
