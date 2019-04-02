@@ -21,12 +21,20 @@ let obj = [
     description: "something"
   },
   {
-    status: "available",
+    status: "soldout",
     id: "a1234",
     name: "alwan",
     img: "https://picsum.photos/500/500",
     price: 100000,
     description: "something"
+  },
+  {
+    status: "available",
+    id: "a1234",
+    name: "ali ismail",
+    img: "https://picsum.photos/100/100",
+    price: 1000,
+    description: "something "
   }
 ];
 
@@ -65,68 +73,62 @@ export default class Home extends React.Component {
                 <Row className="cards">
                   {/* debug sm={this.CheckDepth.bind(this)} */}
 
-                  <div>
-                    {() => {
-                      obj.map((item, i) => {
-                        return (
-                          <div key={i}>
-                            <Col
-                              className={item.status}
-                              onClick={() => {
-                                ctx.actions.setstate({
-                                  status: item.status,
-                                  id: item.id,
-                                  name: item.name,
-                                  img: item.img,
-                                  price: item.price,
-                                  description: item.description
-                                });
-                              }}
-                            >
-                              <Link className="card" to="/buy">
-                                <div className="name">{item.name}</div>
-                                <div>
-                                  <div>
-                                    <img
-                                      className="img"
-                                      src="https://picsum.photos/300/300"
-                                      alt="wrapkit"
-                                    />
-                                  </div>
-                                  <div>
-                                    <div className="details">
-                                      <p style={{ fontFamily: "jannaB" }}>
-                                        د.ع {item.price}
-                                      </p>
-                                      <p
-                                        style={{
-                                          width: "200px",
-                                          height: "70px",
-                                          whiteSpace: "wrap",
-                                          overflow: "hidden",
-                                          paddingTop: 15,
-                                          fontFamily: "jannaR"
-                                        }}
-                                      >
-                                        {item.description}
-                                      </p>
-                                      <p
-                                        style={{
-                                          color: "#8d97ad"
-                                        }}
-                                      >
-                                        .....
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </Link>
-                            </Col>
+                  {obj.map((item, i) => {
+                    return (
+                      <Col
+                        key={i}
+                        className={item.status}
+                        onClick={() => {
+                          ctx.actions.setstate({
+                            status: item.status,
+                            id: item.id,
+                            name: item.name,
+                            img: item.img,
+                            price: item.price,
+                            description: item.description
+                          });
+                        }}
+                      >
+                        <Link className="card" to={"/buy/" + item.id}>
+                          <div className="name">{item.name}</div>
+                          <div>
+                            <div>
+                              <img className="img" src={item.img} alt="photo" />
+                            </div>
+                            <div>
+                              <div className="details">
+                                <p style={{ fontFamily: "jannaB" }}>
+                                  د.ع {item.price}
+                                </p>
+                                <p
+                                  style={{
+                                    width: "200px",
+                                    height: "70px",
+                                    whiteSpace: "wrap",
+                                    overflow: "hidden",
+                                    paddingTop: 15,
+                                    fontFamily: "jannaR",
+                                    margin: "auto",
+                                    marginBottom: -25
+                                  }}
+                                >
+                                  {item.description}
+                                </p>
+                                <p
+                                  style={{
+                                    color: "#8d97ad",
+                                    paddingBottom: 25
+                                  }}
+                                >
+                                  .....
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                        );
-                      });
-                    }}
-                  </div>
+                        </Link>
+                      </Col>
+                    );
+                  })}
 
                   {/* <Col
                     className={ctx.state.status}
