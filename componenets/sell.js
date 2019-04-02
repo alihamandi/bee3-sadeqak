@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
+import Context from "../context";
 import AOS from "aos";
 AOS.init();
 
@@ -68,7 +69,7 @@ export default class Sell extends React.Component {
                   }}
                 >
                   ويمكن تحتاج فوتوشوب علمود تخليها احلى شوية الا اذا جنت ناوي
-                  تحطلة صورة مو حلوة :)
+                  تحطله صورة مو حلوة :)
                 </div>
               </div>
             </div>
@@ -100,8 +101,8 @@ export default class Sell extends React.Component {
                     fontFamily: "jannaR"
                   }}
                 >
-                  املي بيانات صديقك مثلا اكتب شنو المميزات الي بية؟ وليش تريد
-                  تبيعة؟ خلي الناس يقتنعون علمود تبيعة بسرعة
+                  املي بيانات صديقك مثلا اكتب شنو المميزات الي بيه؟ وليش تريد
+                  تبيعه؟ خلي الناس يقتنعون علمود تبيعه بسرعة
                 </div>
               </div>
             </div>
@@ -124,7 +125,7 @@ export default class Sell extends React.Component {
                     fontFamily: "jannaB"
                   }}
                 >
-                  روح لبيت صديقك
+                  سوي شير
                 </h6>
                 <div
                   style={{
@@ -133,7 +134,7 @@ export default class Sell extends React.Component {
                     fontFamily: "jannaR"
                   }}
                 >
-                  اطلع باليل علمود يكون صديقك نايم واخذ وياك صندوك
+                  شير البوست على الفيس بوك حتى تلكى احد يشتريه
                 </div>
               </div>
             </div>
@@ -156,7 +157,7 @@ export default class Sell extends React.Component {
                     fontFamily: "jannaB"
                   }}
                 >
-                  حط صديقك بصندوك و بيعه
+                  اشتري واحد جديد
                 </h6>
                 <div
                   style={{
@@ -165,7 +166,7 @@ export default class Sell extends React.Component {
                     fontFamily: "jannaR"
                   }}
                 >
-                  دخل صديقك بصندوك هو ونايم وبيعه للمشتري
+                  دورلك على صديق جديد حتى تشتريه
                 </div>
               </div>
             </div>
@@ -233,18 +234,17 @@ export default class Sell extends React.Component {
             </div>
 
             <div
-              className="form-button"
+              className="div-of-form-button"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <button>
-                <Link
-                  to="/info"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  بيعه هسة
-                </Link>
-              </button>
+              <Link
+                className="form-button"
+                to="/info"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <button>بيعه هسة</button>
+              </Link>
             </div>
           </Col>
         </Row>

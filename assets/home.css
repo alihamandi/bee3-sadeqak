@@ -18,11 +18,15 @@
   direction: rtl;
 }
 .shit-2 {
-  margin: 50px 200px !important;
+  margin: 50px 200px 50px 200px !important;
+}
+
+.shit-3 {
+  min-width: 300px !important;
 }
 @media only screen and (max-width: 900px) {
   .shit-2 {
-    margin: 50px 50px !important;
+    margin: 50px auto 50px auto !important;
   }
   .how-to {
     margin-right: 50px !important;
@@ -43,7 +47,8 @@ body {
 }
 
 .button {
-  text-align: center;
+  text-decoration: "none";
+  color: "white";
 }
 .button button {
   padding: 20px;
@@ -51,6 +56,7 @@ body {
   font-family: jannaB;
   border: none;
   color: white;
+  margin-bottom: 50px;
   border-radius: 5px;
   background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -63,11 +69,12 @@ body {
   background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
 }
 
-.form-button {
+.div-of-form-button {
   text-align: left;
-  margin-left: 4.5%;
+  margin-left: 7%;
   margin-top: 30px;
 }
+
 .form-button button {
   padding: 10px 30px;
   font-size: 1rem;
@@ -115,6 +122,8 @@ body {
 .infocard {
   margin: 20px auto;
   width: 300px;
+  min-width: 300px;
+
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -130,6 +139,7 @@ body {
   display: flex;
   box-sizing: unset;
   position: relative;
+  width: 90%;
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin: auto !important;
@@ -164,9 +174,41 @@ body {
 
 .infobutton {
   text-align: center;
+  margin: 10px auto;
+  max-height: 100px;
+  max-width: 300px;
 }
 .infobutton button {
-  padding: 20px 110px;
+  max-width: 300px;
+  margin: auto;
+
+  padding: 20px;
+  font-size: 1rem;
+  font-family: jannaB;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #3e4555;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.infobutton button:hover {
+  transition: 750ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #21262e;
+}
+
+.infobuttonx {
+  text-align: center;
+  margin: auto;
+  max-width: 300px;
+}
+.infobuttonx button {
+  max-width: 300px;
+  margin: 10px auto;
+
+  padding: 20px;
   font-size: 1rem;
   font-family: jannaB;
   border: none;
@@ -176,7 +218,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.infobutton button:hover {
+.infobuttonx button:hover {
   transition: 750ms;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -216,8 +258,9 @@ body {
   color: #495057;
 }
 .input {
+  margin: auto !important;
   display: block;
-  width: 90%;
+  width: 80%;
   padding: 1rem 1rem;
   font-size: 1rem;
   line-height: 1.25;
@@ -227,4 +270,53 @@ body {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+}
+
+.status {
+  background-color: #555555 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 10px 0px;
+  width: 300px;
+  color: white !important;
+  font-family: jannaR;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center !important;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+}
+
+.soldout {
+  text-align: center !important;
+  opacity: 0.75;
+  z-index: -5 !important;
+}
+
+.soldout .avail {
+  text-align: center !important;
+  visibility: hidden;
+  position: absolute;
+}
+.soldout .sold {
+  text-align: center !important;
+  margin: auto;
+}
+.available {
+  text-align: center !important;
+}
+
+.available .sold {
+  text-align: center !important;
+  visibility: hidden;
+  position: absolute;
+}
+
+.available .avail {
+  text-align: center !important;
+  margin: auto;
+}
+
+.soldout .infobutton {
+  visibility: hidden;
+  position: absolute;
 }

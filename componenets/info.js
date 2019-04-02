@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
+import Context from "../context";
 
 export default class Info extends React.Component {
   constructor() {
@@ -8,11 +9,11 @@ export default class Info extends React.Component {
   }
   render() {
     return (
-      <div style={{ margin: 70 }}>
+      <div style={{ margin: "auto" }}>
         <Row className="cards">
           <Col style={{ maxWidth: "25%" }}>
             <div className="infocard">
-              <div className="name">محمد ضياء الدين</div>
+              <div className="name">تم عرضه للبيع</div>
               <div>
                 <div>
                   <img
@@ -22,10 +23,19 @@ export default class Info extends React.Component {
                     style={{ paddingBottom: 20 }}
                   />
                 </div>
-                <div>
+                <div className="details">
                   <p
                     style={{
-                      fontFamily: "jannaB",
+                      fontFamily: "jannaR",
+                      paddingTop: 20,
+                      fontSize: "1.5rem"
+                    }}
+                  >
+                    محمد ضياء الدين
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "jannaR",
                       paddingBottom: 40,
                       paddingTop: 20
                     }}
@@ -58,14 +68,16 @@ export default class Info extends React.Component {
             </div>
 
             <div className="infobutton">
-              <button>
-                <Link
-                  to="sell"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  شارك على الفيسبوك{" "}
-                </Link>
-              </button>
+              <Link to="#" style={{ textDecoration: "none", color: "white" }}>
+                <button style={{ minWidth: 300 }}>شارك على الفيسبوك</button>
+              </Link>
+            </div>
+            <div className="infobuttonx">
+              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                <button style={{ minWidth: 300 }}>
+                  شوف الاصدقاء المعروضين هسة
+                </button>
+              </Link>
             </div>
           </Col>
         </Row>
