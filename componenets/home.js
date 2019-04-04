@@ -45,7 +45,7 @@ export default class Home extends React.Component {
                     return (
                       <Col
                         key={i}
-                        className={item.status}
+                        className={item.status + "-home"}
                         onClick={() => {
                           ctx.actions.setstate({
                             status: item.status,
