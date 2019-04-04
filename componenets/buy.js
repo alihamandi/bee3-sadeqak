@@ -2,11 +2,49 @@ import React from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import Context from "../context";
+import _ from "underscore";
+
+let file = require("../test.json");
+let obj = file.obj;
 
 export default class Buy extends React.Component {
   constructor() {
     super();
+    this.state = {
+      status: "",
+      id: "",
+      name: "",
+      img: "",
+      price: 0,
+      description: ""
+    };
   }
+
+  componentDidMount() {
+    function search(id, myArray) {
+      for (var i = 0; i < myArray.length; i++) {
+        if (myArray[i].id === id) {
+          return myArray[i];
+        }
+      }
+    }
+    let x = window.location.search;
+
+    let myid = x.replace(_.first(x, [1]), "");
+    console.log(myid);
+
+    let data = search(myid, obj);
+    this.setState({
+      status: data.status,
+      id: data.id,
+      name: data.name,
+      img: data.img,
+      price: data.price,
+      description: data.description
+    });
+    console.log(data);
+  }
+
   render() {
     return (
       <Context.Consumer>
@@ -15,7 +53,11 @@ export default class Buy extends React.Component {
             <div style={{ margin: "auto" }}>
               <Row className="cards">
                 <Col style={{ maxWidth: "25%" }}>
-                  <div className={ctx.state.status}>
+                  <div
+                    className={
+                      ctx.state.status ? ctx.state.status : this.state.status
+                    }
+                  >
                     <div className="infocard">
                       <div className="status">
                         <div className="avail">معروض للبيع حالياً</div>
@@ -25,7 +67,7 @@ export default class Buy extends React.Component {
                         <div>
                           <img
                             className="img"
-                            src={ctx.state.img}
+                            src={ctx.state.img ? ctx.state.img : this.state.img}
                             alt="wrapkit"
                             style={{ paddingBottom: 20 }}
                           />
@@ -38,7 +80,7 @@ export default class Buy extends React.Component {
                               fontSize: "1.5rem"
                             }}
                           >
-                            {ctx.state.name}
+                            {ctx.state.name ? ctx.state.name : this.state.name}
                           </p>
                           <p
                             style={{
@@ -47,7 +89,10 @@ export default class Buy extends React.Component {
                               paddingTop: 20
                             }}
                           >
-                            د.ع {ctx.state.price}
+                            د.ع
+                            {ctx.state.price
+                              ? ctx.state.price
+                              : this.state.price}
                           </p>
                         </div>
                       </div>
@@ -67,7 +112,9 @@ export default class Buy extends React.Component {
                             fontFamily: "jannaR"
                           }}
                         >
-                          {ctx.state.description}
+                          {ctx.state.description
+                            ? ctx.state.description
+                            : this.state.description}
                         </p>
                       </div>
                     </div>

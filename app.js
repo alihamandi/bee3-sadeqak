@@ -59,7 +59,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path={"/buy/" + this.state.id}
+            path="/buy"
             // component={localStorage.getItem("token") ? Logged : Main}
             component={Buy}
           />

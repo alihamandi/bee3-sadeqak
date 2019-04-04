@@ -3,40 +3,8 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import Context from "../context";
 
-let obj = [
-  {
-    status: "soldout",
-    id: "a12",
-    name: "ali hamandi",
-    img: "https://picsum.photos/400/400",
-    price: 100000,
-    description: "something"
-  },
-  {
-    status: "available",
-    id: "a123",
-    name: "hamdoon",
-    img: "https://picsum.photos/300/300",
-    price: 100000,
-    description: "something"
-  },
-  {
-    status: "soldout",
-    id: "a1234",
-    name: "alwan",
-    img: "https://picsum.photos/500/500",
-    price: 100000,
-    description: "something"
-  },
-  {
-    status: "available",
-    id: "a1234",
-    name: "ali ismail",
-    img: "https://picsum.photos/100/100",
-    price: 1000,
-    description: "something "
-  }
-];
+let file = require("../test.json");
+let obj = file.obj;
 
 export default class Home extends React.Component {
   constructor() {
@@ -89,7 +57,13 @@ export default class Home extends React.Component {
                           });
                         }}
                       >
-                        <Link className="card" to={"/buy/" + item.id}>
+                        <Link
+                          className="card"
+                          to={{
+                            pathname: "/buy",
+                            search: `${item.id}`
+                          }}
+                        >
                           <div className="name">{item.name}</div>
                           <div>
                             <div>
@@ -97,9 +71,10 @@ export default class Home extends React.Component {
                             </div>
                             <div>
                               <div className="details">
-                                <p style={{ fontFamily: "jannaB" }}>
-                                  د.ع {item.price}
-                                </p>
+                                <div style={{ fontFamily: "jannaB" }}>
+                                  <div className="avail">د.ع {item.price}</div>
+                                  <div className="sold">تم بيعه</div>
+                                </div>
                                 <p
                                   style={{
                                     width: "200px",
