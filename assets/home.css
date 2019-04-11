@@ -102,6 +102,9 @@ body {
   text-decoration: none;
   margin: 20px auto;
   width: 300px;
+  min-width: 300px;
+  height: 485px;
+  min-height: 485px;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -323,4 +326,25 @@ body {
 
 .soldout-home {
   opacity: 0.75;
+}
+
+.soldout-home .avail {
+  text-align: center !important;
+  visibility: hidden;
+  position: absolute;
+}
+.soldout-home .sold {
+  text-align: center !important;
+  margin: auto;
+}
+
+.available-home .sold {
+  text-align: center !important;
+  visibility: hidden;
+  position: absolute;
+}
+
+.available-home .avail {
+  text-align: center !important;
+  margin: auto;
 }
