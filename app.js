@@ -32,7 +32,8 @@ class App extends React.Component {
                 name: x.name,
                 img: x.img,
                 price: x.price,
-                description: x.description
+                description: x.description,
+                specs: x.specs
               });
             }
           }

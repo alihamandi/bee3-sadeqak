@@ -3,7 +3,31 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import Context from "../context";
 import AOS from "aos";
+import { Autocomplete, TextInput } from "evergreen-ui";
+import styled from "styled-components";
+
 AOS.init();
+let specs = require("../specs.json");
+
+let Button = styled.button`
+  padding: 2px 15px;
+  display: inline;
+  margin:20px
+  font-size: 1rem;
+  font-family: jannaB;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  &:hover {
+    transition: 750ms;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);}
+  
+ 
+`;
 
 export default class Sell extends React.Component {
   constructor() {
@@ -26,10 +50,7 @@ export default class Sell extends React.Component {
 
         <Row className="shit-2">
           <Col
-            sm={4.5}
             style={{
-              minWidth: "35%",
-              maxWidth: "35%",
               padding: 20
             }}
           >
@@ -172,80 +193,102 @@ export default class Sell extends React.Component {
             </div>
           </Col>
           <Col
-            sm={7.5}
+            className="shit-3"
             style={{
-              minWidth: "60%",
-              maxWidth: "60%",
               paddingRight: 50,
               marginTop: 10
             }}
           >
-            <div
-              className="input-container"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                أرفع صورة صديقك
-              </label>
-              <input className="input" type="file" />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                شنو اسم صديقك؟
-              </label>
-              <input
-                className="input"
-                type="text"
-                placeholder="مثال : مصطفى علوان"
-              />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                ببيش تريد تبيعه؟
-              </label>
-              <input
-                className="input"
-                type="text"
-                placeholder="مثال : ١٠٠٠ دينار "
-              />
-            </div>
-            <div
-              className="input-container"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <label className="label" style={{ display: "block" }}>
-                ليش تريد تبيعه؟
-              </label>
-              <textarea
-                className="input"
-                rows="5"
-                placeholder="اذكرلنا مميزاته، او اذا يعجبك عيوبه "
-              />
-            </div>
+            <Context.Consumer>
+              {ctx => {
+                return (
+                  <div>
+                    <div
+                      className="input-container"
+                      data-aos="fade-right"
+                      data-aos-duration="1000"
+                    >
+                      <label className="label" style={{ display: "block" }}>
+                        أرفع صورة صديقك
+                      </label>
+                      <input className="input" type="file" />
+                    </div>
+                    <div
+                      className="input-container"
+                      data-aos="fade-right"
+                      data-aos-duration="1000"
+                    >
+                      <label className="label" style={{ display: "block" }}>
+                        شنو اسم صديقك؟
+                      </label>
+                      <input
+                        className="input"
+                        type="text"
+                        placeholder="مثال : مصطفى علوان"
+                      />
+                    </div>
+                    <div
+                      className="input-container"
+                      data-aos="fade-right"
+                      data-aos-duration="1000"
+                    >
+                      <label className="label" style={{ display: "block" }}>
+                        حط صفات صديقك حتى نحدد السعر{" "}
+                      </label>
+                      <div className="input">
+                        <Autocomplete
+                          className="input"
+                          title="Fruits"
+                          onChange={changedItem => console.log(changedItem)}
+                          items={specs}
+                        >
+                          {props => {
+                            const { getInputProps, getRef, inputValue } = props;
+                            return (
+                              <div className="specs-div">
+                                <TextInput
+                                  className="specs-input"
+                                  placeholder="صفات صديقك"
+                                  value={inputValue}
+                                  innerRef={getRef}
+                                  {...getInputProps()}
+                                />
 
-            <div
-              className="div-of-form-button"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              <Link
-                className="form-button"
-                to="/info"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <button>بيعه هسة</button>
-              </Link>
-            </div>
+                                <Button>ضيفها</Button>
+                              </div>
+                            );
+                          }}
+                        </Autocomplete>
+                      </div>
+                    </div>
+                    <div
+                      className="input-container"
+                      data-aos="fade-right"
+                      data-aos-duration="1000"
+                    >
+                      <label className="label" style={{ display: "block" }}>
+                        ليش تريد تبيعه؟
+                      </label>
+                      <textarea
+                        className="input"
+                        rows="5"
+                        placeholder="اذكرلنا مميزاته، او اذا يعجبك عيوبه "
+                      />
+
+                      <div className="div-of-form-button">
+                        <Link
+                          className="form-button"
+                          to="/info"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          <button>بيعه هسة</button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }}
+            </Context.Consumer>
           </Col>
         </Row>
       </Container>

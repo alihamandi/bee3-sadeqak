@@ -71,7 +71,7 @@ body {
 
 .div-of-form-button {
   text-align: left;
-  margin-left: 7%;
+  margin-left: 20px;
   margin-top: 30px;
 }
 
@@ -252,7 +252,7 @@ body {
 }
 
 .input-container {
-  margin: auto !important;
+  margin-bottom: 65px;
 }
 
 .label {
@@ -347,4 +347,12 @@ body {
 .available-home .avail {
   text-align: center !important;
   margin: auto;
+}
+
+.specs-div {
+  display: inline;
+}
+
+.specs-input {
+  width: 50;
 }
